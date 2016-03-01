@@ -19,7 +19,7 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-      selectInput("row", label = h3("What do you want to see?"), 
+      selectInput("column", label = h3("What do you want to see?"), 
                   choices = list("Petal Length" = 'Petal.Length', "Petal Width" = 'Petal.Width', "Sepal Length" = 'Sepal.Length',"Sepal Width" = 'Sepal.Width'), 
                   selected = 'Petal.Length'),
       

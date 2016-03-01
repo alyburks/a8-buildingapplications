@@ -17,8 +17,8 @@ shinyServer(function(input, output) {
    
   output$scatterplot <- renderPlotly({
     
-      selection <- paste0('iris$', input$row)
-      df <- as.data.frame(selection)
+      selection <- paste0('iris$', input$column)
+      df <- as.data.frame(iris[,input$column])
       plot_ly(df, type="scatter", marker = list(size = 4, opacity = .4, color = input$color) )
     
     
