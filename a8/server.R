@@ -14,12 +14,12 @@ data("iris")
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-   
+  
   output$scatterplot <- renderPlotly({
     
-      selection <- paste0('iris$', input$column)
-      df <- as.data.frame(iris[,input$column])
-      plot_ly(df, type="scatter", marker = list(size = 4, opacity = .4, color = input$color) )
+    selection <- (paste0(input$column, '.Length'))
+    selection2 <- (paste0(input$column, '.Width'))
+    plot_ly(data = iris, type="scatter", marker = list(color = input$color), mode = "markers" , x = selection, y = selection2)
     
     
     

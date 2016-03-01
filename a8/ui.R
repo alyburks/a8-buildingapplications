@@ -20,12 +20,10 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput("column", label = h3("What do you want to see?"), 
-                  choices = list("Petal Length" = 'Petal.Length', "Petal Width" = 'Petal.Width', "Sepal Length" = 'Sepal.Length',"Sepal Width" = 'Sepal.Width'), 
-                  selected = 'Petal.Length'),
+                  choices = list("Petal" = 'Petal', "Sepal" = 'Sepal'), selected = "Petal"),
       
       radioButtons("color", label = "Color", 
-                   choices = list("Green" = 'green', "Blue" = 'blue', "Red" = 'red'),  
-                   selected = 'green') 
+                   choices = list("Green" = 'green', "Blue" = 'blue', "Red" = 'red'), selected = "blue") 
                    
     ),
     
