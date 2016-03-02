@@ -1,6 +1,7 @@
 
 library(shiny)
 library(plotly)
+library(rsconnect)
 data("iris")
 
 shinyServer(function(input, output) {
